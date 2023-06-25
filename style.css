@@ -60,17 +60,18 @@ a {
 button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 /* ==== HEADER ================================================== */
 header {
     background-color: var(--background-primary);
-
     padding: 10px 15px;
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0px 3px 3px #00000066;
+    z-index: 100;
 }
 
 header .container {
@@ -99,6 +100,64 @@ header nav a {
     text-decoration: underline;
     font-size: 20px;
     font-weight: 500;
+}
+
+header nav a.displayOff {
+    display: none;
+}
+/* ---- Open Menu Off ------------------------------- */
+header .open-menu {
+    display: none;
+}
+
+header #closeMenu {
+    display: none;
+}
+/* ---- Open Menu On ------------------------------- */
+body.openMenu {
+    overflow: hidden;
+}
+
+header #openMenu.displayOff {
+    display: none;
+} 
+
+header #closeMenu.displayOn {
+    display: block;
+}
+
+header .open-menu.displayOn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    height: 100vh;
+}
+
+header .open-menu.displayOn a {
+    color: #fff;
+    padding-block: 10px;
+}
+
+header .open-menu.displayOn .reserve-button {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 40px;
+    width: max-content;
+}
+
+header .open-menu.displayOn .reserve-button img{
+    width: 24px;
+}
+
+header .open-menu.displayOn .reserve-button p {
+    color: var(--background-primary);
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
 }
 
 /* ==== MAIN =============================================*/

@@ -10,11 +10,28 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo"><img src="./assets/logo.png" alt="logo kayc pousada"></div>
+            <div class="logo">
+                <a href="#inn-gallery"><img src="./assets/logo.png" alt="logo kayc pousada"></a>
+            </div>
             <nav>
-                <a href="#contact">Contato</a>
-                <button class="menu" onclick="openMenu()"><img src="./assets/icon/Menu.svg" alt="menu"></button>
+                <a id="contact-link" href="#contact">Contato</a>
+                <button id="openMenu" onclick="openMenu()">
+                    <img src="./assets/icon/Menu.svg" alt="abrir menu">
+                </button>
+                <button id="closeMenu" onclick="closeMenu()">
+                    <img src="./assets/icon/closeMenu.svg" alt="fechar menu">
+                </button>
             </nav>
+        </div>
+        <div id="menu-expanded" class="open-menu">
+            <a href="#inn-gallery" onclick="closeMenu()">Quartos</a>
+            <a href="#city" onclick="closeMenu()">A Cidade</a>
+            <a href="#contact" onclick="closeMenu()">Contatos</a>
+            <a href="#map-location" onclick="closeMenu()">Mapa</a>
+            <a class="reserve-button" href="https://api.whatsapp.com/send/?phone=75999683738&text&type=phone_number&app_absent=0" target="_blank"  onclick="closeMenu()">
+                <img src="./assets/icon/whatsappMenu.svg" alt="whatsapp">
+                <p class="button">RESERVAR</p>
+            </a>
         </div>
     </header>
 
@@ -94,5 +111,7 @@
     <footer>
         <h3>©2023 Kayc Oliveira.</h3>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>
