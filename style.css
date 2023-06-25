@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text);
+}
+
+:root {
+    --background-primary: #E96B00;
+    --background: #FDCDA1;
+    --text: #2D2D2D;
+    --color-emphasis: #FF7600;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper {
+    padding-inline: 20px;
+}
+
+.emphasis {
+    color: var(--color-emphasis);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p, a {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+/* ==== HEADER ================================================== */
+header {
+    background-color: var(--background-primary);
+
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 3px 3px #00000066;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    height: 50px;
+    box-shadow: 0px 3px 4px #000000b3;
+}
+
+header .logo img {
+    height: 100%;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* ==== MAIN =============================================*/
+/* ---- Section Inn ----------------------------*/
+#inn-gallery {
+    width: 100%;
+    padding-inline: 20px;
+}
+
+#inn-gallery ul li {
+    display: flex;
+}
+
+#inn-gallery img {
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 3px 6px;
+}
+
+/* ---- Section info-location ----------------------*/
+#info-location .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ---- Section City ---------------------------- */
+#city {
+    background-color: var(--background);
+}
+
+#city .container {
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#city .content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#city .content-text h2 {
+    font-size: 18px
+}
+
+#city .content-text p {
+    font-size: 14px;
+}
+
+#city .city-gallery ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#city .city-gallery li {
+    display: flex;
+    height: 200px;
+}
+
+#city .city-gallery li img {
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px;
+}
+
+/* ---- Section Contact -------------------------------- */
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact .content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#contact .content-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#contact .content-text a {
+    display: flex;
+}
+
+#contact .content-text img,
+#contact .booking-button a img {
+    width: 24px;
+}
+
+#contact .booking-button a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--background-primary);
+    padding: 8px 16px;
+    border-radius: 40px;
+    width: max-content;
+}
+
+#contact .booking-button a p {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+}
+
+/* ---- Section map-location ----------------------- */
+#map-location iframe {
+    width: 100%;
+    min-height: 450px;
+}
+
+/* ==== Footer ========================================== */
+footer {
+    margin-top: 20px;
+    background-color: var(--background-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+@media only screen and (min-width: 500px) {
+    header {
+        padding-inline: auto;
+    }
+    .container {
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    #inn-gallery {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #inn-gallery li {
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    /* --- section info-location ------------------- */
+    #info-location p {
+        max-width: 500px;
+    }
+
+    /* --- Section City ---------------------------- */ 
+    #city {
+        align-items: center;
+    }
+
+    #city .content-text {
+        max-width: 500px;
+    }
+
+    #city .city-gallery li {
+        max-width: 500px;
+        height: 300px;
+    }
+
+    /* --- Section Contact ----------------------- */
+    #contact .container {
+        align-items: center;
+    }
+
+    /* ---- Section map-location ---------------------------  */
+    #map-location {
+        margin-block: 20px;
+    }
+}
