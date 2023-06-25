@@ -14,6 +14,10 @@
     --color-emphasis: #FF7600;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Roboto", sans-serif;
 }
